@@ -5,7 +5,11 @@ class License(models.Model):
     _description = 'Software License'
     _rec_name = 'license_key'
 
-    license_key = fields.Char(required=True, unique=True)
+    license_key = fields.Char(required=True, index=True)
+    _sql_constraints = [
+        ('license_key_unique', 'unique(license_key)', 'The license key must be unique!')
+    ]
+
     partner_id = fields.Many2one('res.partner')
     product_id = fields.Many2one('product.product')
     start_date = fields.Date()
