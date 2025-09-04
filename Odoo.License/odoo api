@@ -1,0 +1,20 @@
+from odoo import http
+from odoo.http import request
+
+class MyController(http.Controller):
+
+    @http.route('/api/license/validate', type='json', auth='user')
+    def validate_license(self, license_key):
+        license = request.env['license.license'].sudo().search([('license_key', '=', license_key)], limit=1)
+        if not license:
+            return {'valid': 'False', 'reason': 'Invalid license key'}
+
+        if license.status != 'active':
+            return {'valid': 'False', 'reason': 'license.status'}
+
+            return {
+                'valid': 'True',
+                'customer': license.partner_id.name,
+                'product': license.product_id.name,
+                'expiry_date': license.expiry_date.strftime('%Y-%m-%d') if license.expiry_date else None,
+            }

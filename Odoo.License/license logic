@@ -1,0 +1,13 @@
+from odoo import api, fields
+
+class LicenseModel(models.Model):
+    _name = 'your.license.model'
+
+    @api.model
+    def cron_expire_licenses(self):
+        today = fields.Date.context_today(self)
+        expired = self.search([
+            ('status', '=', 'active'),
+            ('end_date', '<', today)
+        ])
+        expired.write({'status': 'expired'})
