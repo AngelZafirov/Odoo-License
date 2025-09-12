@@ -1,7 +1,0 @@
-<odoo>
-    <record id="product_demo" model="license.product">
-        <field name="name">Demo Product</field>
-        <field name="version">1.0</field>
-        <field name="license_type">standard</field>
-    </record>
-</odoo>
