@@ -1,5 +1,5 @@
 {
-    'name': 'Alfaview License',
+    'name': 'alfaview_license',
     'version': '1.0',
     'category': 'Tools',
     'summary': 'License management for software products',
@@ -15,3 +15,4 @@
     'installable': True,
     'application': True,
 }
+
