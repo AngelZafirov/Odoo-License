@@ -8,8 +8,8 @@
         - Assign licenses to customers
         - Track validity and expiration
     """,
-    'author': 'Dein Name / Deine Firma',
-    'website': 'https://deine-website.com',
+    'author': 'TrendTec / Trendtec',
+    'website': 'https://www.trendtec.de',
     'category': 'Sales',
     'license': 'OPL-1',     # wichtig: zeigt es als Third-party App
     'price': 100.0,         # Preis
@@ -27,3 +27,4 @@
     'application': True,
     'auto_install': False,
 }
+
