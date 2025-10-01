@@ -10,7 +10,7 @@
     """,
     'author': 'Deine Firma',
     'website': 'https://deine-website.com',
-    'category': 'Tools',
+    'category': 'Extra Tools',
     'license': 'OPL-1',
     'depends': ['base', 'alfawiev_license_order'],
     'data': [
@@ -21,4 +21,5 @@
     'installable': True,
     'application': True,
 }
+
 
