@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_license_certificate,access_license_certificate,model_license_certificate,group_license_cert_user,1,1,1,0

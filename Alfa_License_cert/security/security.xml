@@ -1,0 +1,6 @@
+<odoo>
+    <record id="group_license_cert_user" model="res.groups">
+        <field name="name">License Certificate User</field>
+        <field name="category_id" ref="base.module_category_tools"/>
+    </record>
+</odoo>
